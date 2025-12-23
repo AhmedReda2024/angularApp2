@@ -1,0 +1,52 @@
+<section class="bg-success p-5 border">
+  <h2>Hello Gallery Component</h2>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div>
+          <ul class="list-unstyled">
+            <li>
+              <a
+                class="text-decoration-none text-white"
+                routerLinkActive="bg-danger rounded px-2"
+                routerLink="tv"
+                >TV</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-decoration-none text-white"
+                routerLinkActive="bg-danger rounded px-2"
+                routerLink="mobile"
+                >Mobile</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-decoration-none text-white"
+                routerLinkActive="bg-danger rounded px-2"
+                routerLink="laptop"
+                >Laptop</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="bg-info p-5 border">
+          <!-- tv - mobile - laptop -->
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-hamada>
+    <h3 #head>clickkdkcnskcns</h3>
+    <h4 #head>clickkdkcnskcns</h4>
+    <h5 #head>clickkdkcnskcns</h5>
+    <h6 #head>clickkdkcnskcns</h6>
+    <button>okay hamada</button>
+  </app-hamada>
+</section>

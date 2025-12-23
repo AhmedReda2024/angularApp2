@@ -1,0 +1,27 @@
+<div class="card h-100">
+  <img height="300px" class="card-img-top" [src]="products.imageCover" [alt]="products.title" />
+  <div class="card-body">
+    <span class="badge bg-info my-3">index: {{ productIndex }} </span>
+
+    <h4 class="card-title h5">{{ products.title }}</h4>
+    <p class="card-text">{{ products.description }}</p>
+
+    <h5 class="h6"><span class="fw-bold">Price:</span> {{ products.price }} EGP</h5>
+    <h5 class="h6"><span class="fw-bold">Quantity:</span> {{ products.quantity }}</h5>
+
+    <h6 class="d-flex flex-wrap gap-2 mb-3">
+      <span class="fw-bold">Sale:</span>
+      <span class="badge" [class]="products.onSale === true ? 'bg-success' : 'bg-danger'">{{
+        products.onSale
+      }}</span>
+    </h6>
+
+    <div class="row">
+      @for (imgSrc of products.images; track $index) {
+      <div class="col-md-3">
+        <img class="w-100" [src]="imgSrc" [alt]="products.title" />
+      </div>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+.alert {
+  padding: 16px 20px;
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+  border-left: 6px solid #facc15;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+  animation: fadeInSlide 0.5s ease-in-out;
+}
+.alert-icon {
+  font-size: 22px;
+}
+
+.alert-message {
+  flex: 1;
+}
+
+.alert-close {
+  background: none;
+  border: none;
+  color: #92400e;
+  font-size: 20px;
+}
+
+.alert-close:hover {
+  transform: scale(1.2);
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

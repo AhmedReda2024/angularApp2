@@ -1,0 +1,33 @@
+<section class="py-5">
+  <div class="container">
+    <div class="title text-center mb-3 shadow rounded mx-auto border border-2 p-2">
+      @if (role === 'admin') {
+      <h2>Hello Admin</h2>
+      } @else if (role === 'user') {
+      <h2>Hello User</h2>
+      } @else {
+      <h2>Hello Visitor</h2>
+      }
+    </div>
+
+    <div class="row g-4">
+      @for (product of productList; track product.id) {
+      <div class="col-md-3">
+        <app-card [products]="product" [productIndex]="$index"></app-card>
+      </div>
+      } @empty {
+      <p>Data is loading....</p>
+      }
+    </div>
+
+    <h2 #ele class="bg-info rounded shadow p-2 mt-4 text-center text-white">
+      Recommended Products
+    </h2>
+
+    @defer ( on interaction(ele) ) {
+    <app-recommend-product></app-recommend-product>
+    } @placeholder {
+    <h3>see more</h3>
+    }
+  </div>
+</section>
